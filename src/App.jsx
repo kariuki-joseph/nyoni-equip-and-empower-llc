@@ -9,6 +9,9 @@ import ACLS from "./assets/pages/ACLS";
 import CPRTraining from "./assets/pages/CPRTraining";
 import NotFound from "./assets/pages/NotFound";
 import SignIn from "./assets/pages/SignIn";
+import AdminDashboard from "./assets/pages/AdminDashboard";
+import AdminProfile from "./assets/pages/AdminProfile";
+import UserProfile from "./assets/pages/UserProfile";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <Route path="/cpr-training" element={<CPRTraining />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/profile" element={<AdminProfile />} />
+        <Route path="/user/profile" element={<UserProfile />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

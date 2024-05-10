@@ -25,7 +25,7 @@ export default function SignIn() {
               Continue
             </Button>
             <span>Or</span>
-            <Button className="w-full flex items-center justify-center" secondary>
+            <Button className="w-full" secondary>
               <FaGoogle  className="mr-2"/> Login with Google
             </Button>
             <div className="text-center">

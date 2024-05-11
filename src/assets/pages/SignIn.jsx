@@ -11,7 +11,7 @@ export default function SignIn() {
       <NavBar />
 
       <div className="flex justify-center items-center">
-        <div className="w-[361px] px-2 py-2 rounded-lg shadow-lg     flex-col justify-start items-center gap-4 inline-flex">
+        <div className="w-[361px] px-2 py-2 rounded-lg shadow-lg flex-col justify-start items-center gap-4 inline-flex">
           <div className="justify-center items-center inline-flex">
             <img src={logo} />
           </div>
@@ -26,11 +26,13 @@ export default function SignIn() {
             </Button>
             <span>Or</span>
             <Button className="w-full" secondary>
-              <FaGoogle  className="mr-2"/> Login with Google
+              <FaGoogle className="mr-2" /> Login with Google
             </Button>
             <div className="text-center">
-              <span className="font-bold">Don’t have an account? </span>
-              <NavLink to={'/signup'} className="text-primary cursor-pointer">Register</NavLink>
+              <span>Don’t have an account? </span>
+              <NavLink to={"/signup"} className="text-primary cursor-pointer">
+                Register
+              </NavLink>
             </div>
           </div>
         </div>

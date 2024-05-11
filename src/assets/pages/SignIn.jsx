@@ -25,7 +25,7 @@ export default function SignIn() {
       <NavBar />
 
       <div className="flex justify-center items-center">
-        <div className="w-[361px] px-2 py-2 rounded-lg shadow-lg flex-col justify-start items-center gap-4 inline-flex">
+        <div className="w-[361px] px-2 pt-2 pb-3 rounded-lg shadow-lg flex-col justify-start items-center gap-4 inline-flex">
           <div className="w-full flex justify-start pt-3 ps-3">
             {showPasswordInput && (
               <IoArrowBack
@@ -65,12 +65,14 @@ export default function SignIn() {
               >
                 {showPasswordInput && (
                   <div className="flex flex-col items-end">
-                  <Input
-                    type="password"
-                    placeholder="Password"
-                    onChange={(value) => {}}
-                  />
-                  <span className="text-primary cursor-pointer pe-3 pt-1">Forgot Password?</span>
+                    <Input
+                      type="password"
+                      placeholder="Password"
+                      onChange={(value) => {}}
+                    />
+                    <span className="text-primary cursor-pointer pe-3 pt-1">
+                      Forgot Password?
+                    </span>
                   </div>
                 )}
               </div>
@@ -83,15 +85,17 @@ export default function SignIn() {
             >
               {showPasswordInput ? "Login" : "Continue"}
             </Button>
-            <span>Or</span>
-            <Button className="w-full" secondary>
-              <FaGoogle className="mr-2" /> Login with Google
-            </Button>
-            <div className="text-center">
-              <span>Don’t have an account? </span>
-              <NavLink to={"/signup"} className="text-primary cursor-pointer">
-                Register
-              </NavLink>
+            <div className={`wd-fullen flex flex-col items-center gap-4 ${showPasswordInput? 'hidden': ''}`}>
+              <span>Or</span>
+              <Button className="w-full" secondary>
+                <FaGoogle className="mr-2" /> Login with Google
+              </Button>
+              <div className="text-center">
+                <span>Don’t have an account? </span>
+                <NavLink to={"/signup"} className="text-primary cursor-pointer">
+                  Register
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>

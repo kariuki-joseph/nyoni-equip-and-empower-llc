@@ -32,7 +32,7 @@ export default function AdminNavbar() {
           to={"/admin/profile"}
           className={({ isActive }) => (isActive ? "text-primary" : "")}
         >
-          <FaRegCircleUser/>
+          <FaRegCircleUser size={20}/>
         </NavLink>
       </div>
     </div>

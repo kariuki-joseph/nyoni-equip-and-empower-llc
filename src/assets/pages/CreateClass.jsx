@@ -1,3 +1,4 @@
+import { useState } from "react";
 import AdminNavbar from "../components/AdminNavbar";
 import { IoClose } from "react-icons/io5";
 import adminClassThumbnail from "../images/admin_class_thumbnail.png";
@@ -7,6 +8,7 @@ import TextAreaInput from "../components/TextAreaInput";
 import Button from "../components/Button";
 
 export default function CreateClass() {
+  const [coverImage, setCoverImage] = useState(adminClassThumbnail);
   const modesOfLearning = [
     {
       label: "Online",
@@ -34,14 +36,29 @@ export default function CreateClass() {
           <div className="flex justify-center items-center flex-col">
             <div className="border border-dashed rounded-lg p-3 flex flex-col items-center justify-center">
               <img
-                src={adminClassThumbnail}
+                src={coverImage}
                 alt="Class Image Thumbnail"
-                className="mb-2"
+                className="mb-2 max-h-[100px] max-w-[168px] object-cover"
               />
-              <span className="underline cursor-pointer text-xs">
-                {" "}
+              <input
+                type="file"
+                accept=".jpg, .jpeg, .png"
+                className="hidden"
+                id="fileInput"
+                onChange={(event) => {
+                  const file = event.target.files[0];
+                  if(file){
+                    setCoverImage(URL.createObjectURL(file));
+                  }
+                  
+                }}
+              />{" "}
+              <label
+                htmlFor="fileInput"
+                className="underline text-xs cursor-pointer "
+              >
                 Change Cover Photo
-              </span>
+              </label>
             </div>
             <div className="grid grid-cols-2 gap-4 mt-5 w-full px-5">
               <Input
@@ -72,7 +89,9 @@ export default function CreateClass() {
                 onChange={(value) => {}}
               />
             </div>
-            <Button primary className="mt-4 px-8">Submit</Button>
+            <Button primary className="mt-4 px-8">
+              Submit
+            </Button>
           </div>
         </div>
       </div>

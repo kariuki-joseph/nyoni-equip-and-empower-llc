@@ -6,7 +6,7 @@ let buttonClass = `py-2 px-4 flex justify-center items-center rounded-lg h-min $
   }
 
   if (secondary) {
-    buttonClass += ' hover:bg-primary-700 text-default border border-primary';
+    buttonClass += ' hover:bg-primary-700 text-primary border border-primary';
   }
 
   return (

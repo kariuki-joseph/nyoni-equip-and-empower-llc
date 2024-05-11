@@ -13,6 +13,7 @@ import AdminDashboard from "./assets/pages/AdminDashboard";
 import AdminProfile from "./assets/pages/AdminProfile";
 import UserProfile from "./assets/pages/UserProfile";
 import CreateClass from "./assets/pages/CreateClass";
+import ViewClass from "./assets/pages/ViewClass";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/admin/profile" element={<AdminProfile />} />
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/admin/classes/create" element={<CreateClass />} />
+        <Route path="/admin/classes/:id" element={<ViewClass />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

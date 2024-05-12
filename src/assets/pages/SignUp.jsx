@@ -16,7 +16,7 @@ export default function SignUp() {
           <div className="justify-center items-center inline-flex">
             <img src={logo} />
           </div>
-          <div className="text-center">
+          <div className="text-center px-3">
             Continue With The Following To Create An Account To Get Started With
             Us
           </div>

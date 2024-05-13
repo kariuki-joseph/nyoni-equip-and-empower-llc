@@ -46,12 +46,10 @@ export default function Home() {
               </h3>
               <p>
                 Well articulated trainings provided by dedicated and trained
-                professionals.{" "}
+                professionals.
               </p>
-              <NavLink to="/courses">
-                {" "}
+              <NavLink to="#">
                 <Button primary className="px-10">
-                  {" "}
                   View Courses
                 </Button>
               </NavLink>
@@ -112,10 +110,7 @@ export default function Home() {
               Popular Certifications Offered
             </h2>
             <div className="flex gap-x-10 pt-5">
-              <NavLink
-                to="/#"
-                className="flex flex-col justify-center"
-              >
+              <NavLink to="/#" className="flex flex-col justify-center">
                 <img
                   src={CPRThumnail}
                   alt="CPR Certification"
@@ -126,10 +121,7 @@ export default function Home() {
                 </span>
               </NavLink>
 
-              <NavLink
-                to="#"
-                className="flex flex-col justify-center"
-              >
+              <NavLink to="#" className="flex flex-col justify-center">
                 <img
                   src={ACLSThumbnail}
                   alt="CPR Certification"
@@ -140,10 +132,7 @@ export default function Home() {
                 </span>
               </NavLink>
 
-              <NavLink
-                to="#"
-                className="flex flex-col justify-center"
-              >
+              <NavLink to="#" className="flex flex-col justify-center">
                 <img
                   src={PALSThumbnaill}
                   alt="CPR Certification"

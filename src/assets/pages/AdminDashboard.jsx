@@ -6,10 +6,10 @@ import { FaPlus } from "react-icons/fa6";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
-import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import { Tabs } from "@mui/material";
 import AdminClass from "../components/AdminClass";
+import { useNavigate } from "react-router-dom";
 
 export default function AdminDashboard() {
   const [value, setValue] = useState("1");
@@ -17,9 +17,26 @@ export default function AdminDashboard() {
   const [defaultColor] = useState("#000000");
   const [physicalClasses, setPhysicalClasses] = useState([]);
   const [blendedClasses, setBlendedClasses] = useState([]);
+  const navigate = useNavigate();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+  const handleEditClick = () => {
+    console.log("Edit button clicked");
+  };
+  const handleDraftClick = () => {
+    console.log("Draft button clicked");
+  };
+  const handleDeleteClick = () => {
+    console.log("Delete button clicked");
+  };
+  const handleViewClass = (classId) => {
+    navigate(`/admin/classes/${classId}`);
+  };
+
+  const handleCreateClass = () => {
+    navigate("/admin/classes/create");
   };
 
   useEffect(() => {
@@ -107,8 +124,8 @@ export default function AdminDashboard() {
             </TabContext>
           </Box>
         </div>
-        
-        <Button primary onClick={() => {}}>
+
+        <Button primary onClick={handleCreateClass}>
           <FaPlus className="mr-2" /> Create Class
         </Button>
       </div>
@@ -117,13 +134,27 @@ export default function AdminDashboard() {
         <TabContext value={value}>
           <TabPanel value="1">
             {physicalClasses.map((classData) => (
-              <AdminClass key={classData.id} classData={classData} />
+              <AdminClass
+                key={classData.id}
+                classData={classData}
+                onViewClass={handleViewClass}
+                onEdit={handleEditClick}
+                onDraft={handleDraftClick}
+                onDelete={handleDeleteClick}
+              />
             ))}
           </TabPanel>
 
           <TabPanel value="2">
             {blendedClasses.map((classData) => (
-              <AdminClass key={classData.id} classData={classData} />
+              <AdminClass
+                key={classData.id}
+                classData={classData}
+                onViewClass={() => handleViewClass(classData)}
+                onEdit={handleEditClick}
+                onDraft={handleDraftClick}
+                onDelete={handleDeleteClick}
+              />
             ))}
           </TabPanel>
         </TabContext>

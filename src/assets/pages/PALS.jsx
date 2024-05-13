@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import CourseCard from "../components/CourseCard";
 import PALSThumbnail from "../images/pals_thumbnail.png";
+import { useNavigate } from "react-router-dom";
 
 export default function PALS() {
   const [courses, setCourses] = useState([]);
+  const navigate = useNavigate();
 
   const handleClassBooking = (course) => {
+    navigate(`/courses/${course.id}/book`)
     console.log("Booked class", course);
   };
 

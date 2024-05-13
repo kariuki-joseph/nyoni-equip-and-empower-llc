@@ -32,10 +32,10 @@ export default function NavBar() {
         </div>
 
         <NavLink
-          to={"/signin"}
+          to={"/signup"}
           className={({ isActive }) => (isActive ? "text-primary" : "")}
         >
-          <Button primary onClick={() => {}}>Sign In</Button>
+          <Button primary onClick={() => {}}>Sign Up</Button>
         </NavLink>
       </div>
     </div>

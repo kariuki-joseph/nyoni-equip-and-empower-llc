@@ -5,7 +5,7 @@ export default function CourseCard({ course, onBookClass }) {
   const { courseName, duration, description, date, time, price, thumbnail } =
     course;
   return (
-    <div className="rounded shadow p-5">
+    <div className="rounded-lg shadow p-5">
       <div className="flex w-full justify-center">
         <img
           src={thumbnail || adminClassThumbnail}

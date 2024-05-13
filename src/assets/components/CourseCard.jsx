@@ -2,14 +2,17 @@ import adminClassThumbnail from "../images/admin_class_thumbnail_lg.png";
 import Button from "../components/Button";
 
 export default function CourseCard({ course, onBookClass }) {
-  const { courseName, duration, description, date, time, price } = course;
+  const { courseName, duration, description, date, time, price, thumbnail } =
+    course;
   return (
     <div className="rounded shadow p-5">
-      <img
-        src={adminClassThumbnail}
-        alt="Class Image Thumbnail"
-        className="max-h-[230px] w-auto object-contain"
-      />
+      <div className="flex w-full justify-center">
+        <img
+          src={thumbnail || adminClassThumbnail}
+          alt="Class Image Thumbnail"
+          className="max-h-[230px] w-auto object-contain"
+        />
+      </div>
       <div className="flex justify-between mt-3">
         <h3 className="font-bold"> {courseName} </h3>
         <h3 className="font-bold">{duration}hrs</h3>

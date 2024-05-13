@@ -21,6 +21,7 @@ export default function AdminClass({ classData, onEdit, onDraft, onDelete }) {
             Start Date : {classData.startDate} End Date : {classData.endDate}
           </p>
         </div>
+        
         <div className="flex gap-x-6">
           <BiEditAlt className="cursor-pointer" size={24} />
           <FaRegFile className="cursor-pointer" size={24} />

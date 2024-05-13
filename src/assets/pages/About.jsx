@@ -4,8 +4,13 @@ export default function About() {
   return (
     <div>
         <NavBar/>
-      <h2>About</h2>
-      <p>About Nyoni LLC</p>
+      
+      <div className="flex w-full justify-center">
+        <div className="flex-flex-col w-11/12 mt-10">
+          About Nyoni Equip Support and Empower LLC
+        </div>
+      </div>
+      
     </div>
   )
 }

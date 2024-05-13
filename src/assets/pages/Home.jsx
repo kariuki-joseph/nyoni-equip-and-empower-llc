@@ -48,11 +48,11 @@ export default function Home() {
                 Well articulated trainings provided by dedicated and trained
                 professionals.{" "}
               </p>
-              <NavLink to="/classes">
+              <NavLink to="/courses">
                 {" "}
                 <Button primary className="px-10">
                   {" "}
-                  View Classes
+                  View Courses
                 </Button>
               </NavLink>
             </div>
@@ -99,7 +99,7 @@ export default function Home() {
                 <li className="text-base">ACLS Renewal and Initial</li>
                 <li className="text-base">PALS Renewal and Initial</li>
               </ul>
-              <NavLink to="/classes">
+              <NavLink to="#">
                 <Button primary className="px-10">
                   Request a Quote
                 </Button>
@@ -113,7 +113,7 @@ export default function Home() {
             </h2>
             <div className="flex gap-x-10 pt-5">
               <NavLink
-                to="/courses/12"
+                to="/#"
                 className="flex flex-col justify-center"
               >
                 <img
@@ -127,7 +127,7 @@ export default function Home() {
               </NavLink>
 
               <NavLink
-                to="/courses/12"
+                to="#"
                 className="flex flex-col justify-center"
               >
                 <img
@@ -141,7 +141,7 @@ export default function Home() {
               </NavLink>
 
               <NavLink
-                to="/courses/12"
+                to="#"
                 className="flex flex-col justify-center"
               >
                 <img

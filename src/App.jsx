@@ -14,6 +14,7 @@ import AdminProfile from "./assets/pages/AdminProfile";
 import UserProfile from "./assets/pages/UserProfile";
 import CreateClass from "./assets/pages/CreateClass";
 import ViewClass from "./assets/pages/ViewClass";
+import CourseBooking from "./assets/pages/CourseBooking";
 import Test from "./assets/pages/Test";
 
 function App() {
@@ -32,7 +33,8 @@ function App() {
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/admin/classes/create" element={<CreateClass />} />
         <Route path="/admin/classes/:id" element={<ViewClass />} />
-        <Route path="/test" element={<Test/>} />
+        <Route path="/courses/:id/book" element={<CourseBooking />} />
+        <Route path="/test" element={<Test />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

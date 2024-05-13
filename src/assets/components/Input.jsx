@@ -16,9 +16,9 @@ export default function Input({
   };
 
   return (
-    <div className="relative w-full">
+    <div className={`relative w-full ${className}`}>
       <input
-        className={`text-black/opacity-50 text-sm outline-none border border-gray-400 rounded-lg p-3 w-full ${className}`}
+        className={`text-black/opacity-50 text-sm outline-none border border-gray-400 rounded-lg p-3 w-full`}
         onChange={onChange}
         type={inputType}
         placeholder={placeholder}

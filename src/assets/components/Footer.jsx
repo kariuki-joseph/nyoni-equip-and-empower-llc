@@ -24,7 +24,7 @@ export default function Footer() {
         <h3 className="text-primary text-2xl">Quick Links</h3>
         <ul className="flex flex-col gap-y-3 mt-3">
           <li>
-            <NavLink to="/home" className="font-bold text-sm underline">
+            <NavLink to="/" className="font-bold text-sm underline">
               Home
             </NavLink>
           </li>

@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import CourseCard from "../components/CourseCard";
 import adminClassThumbnail from "../images/admin_class_thumbnail_lg.png";
+import { useNavigate } from "react-router-dom";
 
 export default function CPRTraining() {
   const [courses, setCourses] = useState([]);
+  const navigate = useNavigate();
 
   const handleClassBooking = (course) => {
+    navigate(`/courses/${course.id}/book`);
     console.log("Booked class", course);
   };
 

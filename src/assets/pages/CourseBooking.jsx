@@ -9,10 +9,19 @@ import { FaCalendarDay } from "react-icons/fa";
 import { BiSolidLock } from "react-icons/bi";
 import paymentPaypal from "../images/payment_paypal.png";
 import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function CourseBooking() {
   const [course, setCourse] = useState({});
   const [paymentMethod, setPaymentMethod] = useState("card");
+  const navigate = useNavigate();
+
+  const handlePayment = () => {
+    console.log("handling payments...");
+    setTimeout(function () {
+      navigate("/my-classes");
+    }, 1000);
+  };
 
   const modesOfLearning = [
     {
@@ -147,11 +156,7 @@ export default function CourseBooking() {
                 Back
               </Button>
 
-              <Button
-                primary
-                onClick={() => window.history.back()}
-                className="px-14"
-              >
+              <Button primary onClick={ handlePayment} className="px-14">
                 Pay ${course.price}
               </Button>
             </div>

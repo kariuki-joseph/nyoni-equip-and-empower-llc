@@ -17,6 +17,7 @@ import ViewClass from "./assets/pages/ViewClass";
 import CourseBooking from "./assets/pages/CourseBooking";
 import Test from "./assets/pages/Test";
 import MyClasses from "./assets/pages/MyClasses";
+import AdminLogin from "./assets/pages/AdminLogin";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/admin/classes/create" element={<CreateClass />} />
         <Route path="/admin/classes/:id" element={<ViewClass />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/courses/:id/book" element={<CourseBooking />} />
         <Route path="my-classes" element={<MyClasses />} />
         <Route path="/test" element={<Test />} />

@@ -89,7 +89,7 @@ export default function CreateClass() {
                 onChange={(value) => {}}
               />
             </div>
-            <Button primary className="mt-4 px-8">
+            <Button primary className="mt-4 px-8" onClick={() => window.history.back()}>
               Submit
             </Button>
           </div>

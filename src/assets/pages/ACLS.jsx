@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import CourseCard from "../components/CourseCard";
 import ACLSThumbnail from "../images/acls_thumbnail.png";
+import { useNavigate } from "react-router-dom";
 
 export default function ACLS() {
   const [courses, setCourses] = useState([]);
+  const navigate = useNavigate();
 
   const handleClassBooking = (course) => {
+    navigate(`/courses/${course.id}/book`)
     console.log("Booked class", course);
   };
 
